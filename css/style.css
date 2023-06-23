@@ -1,1 +1,235 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/img/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .cards {
+  max-width: 1150px;
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+body .cards .bank__cards {
+  width: 541px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+body .cards .bank__cards .card__front {
+  width: 447px;
+  padding: 27px 43px 27px 32px;
+  background-image: url(/img/bg-card-front.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+body .cards .bank__cards .card__front .circles {
+  width: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .cards .bank__cards .card__front .circles .big__circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 100%;
+}
+body .cards .bank__cards .card__front .circles .small__circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+body .cards .bank__cards .card__front .card__info {
+  width: 383px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+body .cards .bank__cards .card__front .card__info h1 {
+  font-size: 28px;
+  letter-spacing: 3.422px;
+  color: white;
+}
+body .cards .bank__cards .card__front .card__info .user__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .cards .bank__cards .card__front .card__info .user__info h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+body .cards .bank__cards .card__front .card__info .user__info p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+body .cards .bank__cards .card__back {
+  width: 447px;
+  border-radius: 10px;
+  background: linear-gradient(169deg, #FFF 0, #D2D3D9 100%);
+  padding: 23px 0 47px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 94px;
+}
+body .cards .bank__cards .card__back .quarty {
+  width: 100%;
+  height: 54px;
+  background: #000;
+}
+body .cards .bank__cards .card__back .back__in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+}
+body .cards .bank__cards .card__back .back__in .card__cvc {
+  width: 361px;
+  height: 38px;
+  background: #ADB5BE;
+  padding-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+body .cards .card__information {
+  width: 381px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+body .cards .card__information form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+body .cards .card__information form label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #21092F;
+}
+body .cards .card__information form .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+body .cards .card__information form .card__content input {
+  width: 381px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  border: 1px solid #DFDEE0;
+  outline: none;
+}
+body .cards .card__information form .card__content input::-moz-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .card__content input:-ms-input-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .card__content input::placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info {
+  display: flex;
+  gap: 20px;
+}
+body .cards .card__information form .cards__info .data {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+body .cards .card__information form .cards__info .data .mounth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .cards .card__information form .cards__info .data .mounth input {
+  width: 80px;
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: 1px solid #DFDEE0;
+  outline: none;
+}
+body .cards .card__information form .cards__info .data .mounth input::-moz-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info .data .mounth input:-ms-input-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info .data .mounth input::placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info .cvc {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+body .cards .card__information form .cards__info .cvc input {
+  width: 191px;
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: 1px solid #DFDEE0;
+  outline: none;
+}
+body .cards .card__information form .cards__info .cvc input::-moz-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info .cvc input:-ms-input-placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information form .cards__info .cvc input::placeholder {
+  color: #21092F;
+  font-size: 18px;
+  opacity: 0.25;
+}
+body .cards .card__information button {
+  background: #21092F;
+  padding: 15px 157px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
