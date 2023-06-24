@@ -1,18 +1,15 @@
-// let btn = document.querySelector("button")
 let form = document.querySelector("form")
-let finish = document.querySelector(".finish")
 let submitBtn = document.querySelector(".confirm")
-let cardNameInp = document.querySelector("#user")
+let cardholderInp = document.querySelector("#user")
 let cardNumInp = document.querySelector("#number")
-let cardMonthInp = document.querySelector("#month")
-let cardYearInp = document.querySelector("#years")
-let cardCvcInp = document.querySelector("#cvc")
+let mm = document.querySelector('#month')
+let yy = document.querySelector('#years')
+let cvc = document.querySelector('#cvc')
 let inputs = document.querySelectorAll("input")
 let closeBtn = document.querySelector("[close-btn]")
-let cardName = document.querySelector("#numberInner")
-let cardNumber = document.querySelector('#nameInner')
-let mmyy = document.querySelector('#myInner')
-let cvcIn = document.querySelector("#cvcInner")
+let cardholderName = document.querySelector('#cardNameInnerText')
+let cardNumber = document.querySelector('#cardNumberInnerText')
+let mmyy = document.querySelector('#mmyy')
 let afters = document.querySelectorAll("form div p")
 let arr
 let a
@@ -24,18 +21,19 @@ function every(inputs) {
    }
    return true
 }
-function createUser(cardName, cardNumber, mm, yy, cvc) {
+function createUser(cardholderName, cardNumber, MM, YY, cvc) {
    return {
-      cardName,cardNumber,
-      mm,
-      yy,
+      cardholderName,
+      cardNumber,
+      MM,
+      YY,
       cvc
    }
 }
 
-let info = []
+let users = []
 
-cardNumInp.addEventListener('input', () => {
+cardNumInp.addEventListener("input", () => {
    arr = cardNumInp.value.split(" ").join("")
    if (arr.length % 4 === 0 && arr.length !== 16) {
       cardNumInp.value += " "
@@ -43,17 +41,17 @@ cardNumInp.addEventListener('input', () => {
    cardNumber.innerHTML = cardNumInp.value
 })
 
-cardNameInp.addEventListener('input', () => {
-   cardName.innerHTML = cardNameInp.value
+cardholderInp.addEventListener('input', () => {
+   cardholderName.innerHTML = cardholderInp.value
 })
 
 mmyy.addEventListener('input', () => {
    console.log(mmyy);
 })
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener("click", () => {
    if (every(inputs) && !isNaN(arr / 1)) {
-      info.push(createUser(cardNameInp.value, Number(arr), cardMonthInp.value, cardYearInp.value, cardCvcInp.value))
+      users.push(createUser(cardholderInp.value, Number(arr), mm.value, yy.value, cvc.value))
       for (let i = 0; i < inputs.length; i++) {
          inputs[i].classList.remove('red-border')
 
@@ -65,7 +63,7 @@ submitBtn.addEventListener('click', () => {
       }
       form.style.display = 'none'
       finish.style.display = 'flex'
-      console.log(info);
+      console.log(users);
    } else if (!every(inputs) || isNaN(arr / 1)) {
       if (!every(inputs)) {
          for (let i = 0; i < inputs.length; i++) {
