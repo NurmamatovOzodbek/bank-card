@@ -11,16 +11,18 @@ body {
   height: 100vh;
   background-image: url(/img/bg-main-desktop.png);
   background-repeat: no-repeat;
-  background-size: 38%;
+  background-size: 34%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 body .cards {
-  max-width: 1150px;
+  width: 1150px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 120px;
+  justify-content: space-between;
+  gap: 30px;
 }
 body .cards .bank__cards {
   width: 541px;
@@ -232,4 +234,94 @@ body .cards .card__information button {
   border-radius: 8px;
   font-size: 18px;
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(/img/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  body .cards {
+    justify-content: center;
+    gap: 50px;
+  }
+  body .cards .bank__cards {
+    position: relative;
+    width: 343px;
+    gap: 0px;
+  }
+  body .cards .bank__cards .card__front {
+    position: absolute;
+    width: 285px;
+    border-radius: 10px;
+    padding: 18px 19px 21px 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    z-index: 1;
+  }
+  body .cards .bank__cards .card__front .card__info {
+    width: 244px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  body .cards .bank__cards .card__front .card__info h1 {
+    font-size: 18px;
+    letter-spacing: 2.2px;
+  }
+  body .cards .bank__cards .card__front .card__info .user__info h2 {
+    font-size: 9px;
+    letter-spacing: 1.286px;
+  }
+  body .cards .bank__cards .card__front .card__info .user__info p {
+    font-size: 9px;
+    letter-spacing: 1.286px;
+  }
+  body .cards .bank__cards .card__back {
+    width: 285px;
+    padding: 15px 0;
+    gap: 15.5px;
+    margin-left: 57px;
+    transform: translateY(-110px);
+  }
+  body .cards .bank__cards .card__back .back__in .card__cvc {
+    width: 231px;
+    height: 30px;
+    padding-right: 11px;
+    font-size: 9px;
+    letter-spacing: 1.286px;
+  }
+  body .cards .card__information {
+    width: 327px;
+    gap: 28px;
+  }
+  body .cards .card__information form {
+    gap: 20px;
+  }
+  body .cards .card__information form .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  body .cards .card__information form .card__content input {
+    width: 327px;
+    padding: 11px 16px;
+  }
+  body .cards .card__information form .cards__info {
+    gap: 11px;
+  }
+  body .cards .card__information form .cards__info .data .mounth {
+    gap: 8px;
+  }
+  body .cards .card__information form .cards__info .data .mounth input {
+    width: 72px;
+  }
+  body .cards .card__information form .cards__info .cvc input {
+    width: 164px;
+  }
+  body .cards .card__information button {
+    padding: 15px 130px;
+  }
 }/*# sourceMappingURL=style.css.map */
