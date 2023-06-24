@@ -11,16 +11,18 @@ body{
   height: 100vh;
   background-image: url(/img/bg-main-desktop.png);
   background-repeat: no-repeat;
-  background-size: 38%;
+  background-size: 34%;
 
   display: flex;
   align-items: center;
   justify-content: center;
   .cards{
-    max-width: 1150px;
+    width: 1150px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 120px;
+    justify-content: space-between;
+    gap: 30px;
     .bank__cards{
       width: 541px;
 
@@ -206,6 +208,109 @@ body{
 
         font-size: 18px;
         color:white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    background-image: url(/img/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .cards{
+      justify-content: center;
+      gap: 50px;
+      .bank__cards{
+        position: relative;
+        width: 343px;
+        gap: 0px;
+
+        .card__front{
+          position: absolute;
+          width: 285px;
+          border-radius: 10px;
+          padding: 18px 19px 21px 19px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 37px;
+          // transform: translateY(95px);
+          z-index: 1;
+          .card__info{
+            width: 244px;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            h1{
+              font-size: 18px;
+              letter-spacing: 2.2px;
+            }
+            .user__info{
+              h2{
+                font-size: 9px;
+                letter-spacing: 1.286px;
+              }
+              p{
+                font-size: 9px;
+                letter-spacing: 1.286px;
+              }
+            }
+          }
+        }
+        .card__back{
+          width: 285px;
+          padding: 15px 0;
+
+          gap: 15.5px;
+          margin-left: 57px;
+          transform: translateY(-110px);
+          .back__in{
+            .card__cvc{
+              width: 231px;
+              height: 30px;
+              padding-right: 11px;
+
+              font-size: 9px;
+              letter-spacing: 1.286px;
+            }
+          }
+        }
+      }
+      .card__information{
+        width: 327px;
+        gap: 28px;
+        form{
+          gap: 20px;
+          .card__content{
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            input{
+              width: 327px;
+              padding: 11px 16px;
+            }
+          }
+          .cards__info{
+            gap: 11px;
+            .data{
+              .mounth{
+                gap: 8px;
+                input{
+                  width: 72px;
+                }
+              }
+            }
+            .cvc{
+              input{
+                width: 164px;
+              }
+            }
+          }
+        }
+        button{
+          padding: 15px 130px;
+        }
       }
     }
   }
