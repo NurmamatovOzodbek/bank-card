@@ -202,16 +202,38 @@ body{
             }
           }
         }
-      }
-      button{
-        background: #21092F;
-        padding: 15px 157px;
-        border: 0;
-        border-radius: 8px;
+        button{
+          background: #21092F;
+          padding: 15px 157px;
+          border: 0;
+          border-radius: 8px;
 
-        font-size: 18px;
-        color:white;
+          font-size: 18px;
+          color:white;
+        }
       }
+      .finish {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 381px;
+
+        img {
+           margin: 35px;
+        }
+
+        .heading {
+           letter-spacing: 3.422px;
+           font-size: 28px;
+           margin-bottom: 16px;
+           color: #21092F;
+        }
+
+        p {
+           color: #8F8694;
+           margin-bottom: 48px;
+        }
+     }
     }
   }
 }
@@ -313,9 +335,9 @@ body{
               }
             }
           }
-        }
-        button{
-          padding: 15px 130px;
+          button{
+            padding: 15px 130px;
+          }
         }
       }
     }
